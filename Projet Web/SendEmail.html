@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Project</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="wrapper">
+                <div class="logo"><a href="Home.html">MYRIAM KANNOU</a></div>
+                <input type="radio" name="slider" id="menu-btn">
+                <input type="radio" name="slider" id="close-btn">
+                <ul class="nav-links">
+                    <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+                    <li><a href="Education.html">Education</a></li>
+                    <li><a href="Projects.html">Projects</a></li>
+                    <li><a href="Quizz.html">Quizz</a></li>
+                    <li><a href="test.html">Skills</a></li>
+                    <li><a href="SendEmail.html">Your Email</a></li>
+
+                    <li>
+                        <a href="#" class="desktop-item">Contact Me</a>
+                        <input type="checkbox" id="showMega">
+                        <label for="showMega" class="mobile-item">Contact Me</label>
+                        <div class="mega-box">
+                            <div class="content">
+                                <div class="row">
+                                    <img src="https://fadzrinmadu.github.io/hosted-assets/responsive-mega-menu-and-dropdown-menu-using-only-html-and-css/img.jpg"
+                                        alt="">
+                                </div>
+                                <div class="row">
+                                    <header>Design Services</header>
+                                    <ul class="mega-links">
+                                        <li><a href="#">Graphics</a></li>
+                                        <li><a href="#">Vectors</a></li>
+                                        <li><a href="#">Business cards</a></li>
+                                        <li><a href="#">Custom logo</a></li>
+                                    </ul>
+                                </div>
+                                <div class="row">
+                                    <header>Email Services</header>
+                                    <ul class="mega-links">
+                                        <li><a href="#">Personal Email</a></li>
+                                        <li><a href="#">Business Email</a></li>
+                                        <li><a href="#">Mobile Email</a></li>
+                                        <li><a href="#">Web Marketing</a></li>
+                                    </ul>
+                                </div>
+                                <div class="row">
+                                    <header>Security services</header>
+                                    <ul class="mega-links">
+                                        <li><a href="#">Site Seal</a></li>
+                                        <li><a href="#">VPS Hosting</a></li>
+                                        <li><a href="#">Privacy Seal</a></li>
+                                        <li><a href="#">Website design</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+            </div>
+        </nav>
+    </header>
+    <div class="form-container">
+        <h2>Please Write Your Email Adress and Your Name : </h2>
+        <form id="myForm">
+            <label for="name">Name :</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Adress :</label>
+            <input type="email" id="email" name="email" required>
+
+            <button type="button" class="btn btn-1" onclick="submitForm()">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function submitForm() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+
+            if (name && email) {
+                alert("Un email a été envoyé à l'adresse : " + email);
+                // Vous pouvez également ajouter ici le code pour envoyer un email, mais cela nécessitera un backend.
+            } else {
+                alert("Veuillez remplir tous les champs.");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+
+<!-- https://docs.google.com/document/d/1POuOXa9AoEESk2yuz_cval7kYyhFN8nBV1DpEnwgjcs/edit?usp=sharing -->

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<head>
+    <title>projet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="wrapper">
+                <div class="logo"><a href="Home.html">MYRIAM KANNOU</a></div>
+                <input type="radio" name="slider" id="menu-btn">
+                <input type="radio" name="slider" id="close-btn">
+                <ul class="nav-links">
+                    <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+                    <li><a href="Education.html">Education</a></li>
+                    <li><a href="Projects.html">Projects</a></li>
+                    <li><a href="Quizz.html">Quizz</a></li>
+                    <li><a href="test.html">Skills</a></li>
+                    <li><a href="SendEmail.html">Your Email</a></li>
+
+                    <li>
+                        <a href="#" class="desktop-item">Contact Me</a>
+                        <input type="checkbox" id="showMega">
+                        <label for="showMega" class="mobile-item">Contact Me</label>
+                        <div class="mega-box">
+                            <div class="content">
+                                <div class="row">
+                                    <img src="https://fadzrinmadu.github.io/hosted-assets/responsive-mega-menu-and-dropdown-menu-using-only-html-and-css/img.jpg"
+                                        alt="">
+                                </div>
+                                <div class="row">
+                                    <header>Design Services</header>
+                                    <ul class="mega-links">
+                                        <li><a href="#">Graphics</a></li>
+                                        <li><a href="#">Vectors</a></li>
+                                        <li><a href="#">Business cards</a></li>
+                                        <li><a href="#">Custom logo</a></li>
+                                    </ul>
+                                </div>
+                                <div class="row">
+                                    <header>Email Services</header>
+                                    <ul class="mega-links">
+                                        <li><a href="#">Personal Email</a></li>
+                                        <li><a href="#">Business Email</a></li>
+                                        <li><a href="#">Mobile Email</a></li>
+                                        <li><a href="#">Web Marketing</a></li>
+                                    </ul>
+                                </div>
+                                <div class="row">
+                                    <header>Security services</header>
+                                    <ul class="mega-links">
+                                        <li><a href="#">Site Seal</a></li>
+                                        <li><a href="#">VPS Hosting</a></li>
+                                        <li><a href="#">Privacy Seal</a></li>
+                                        <li><a href="#">Website design</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+            </div>
+        </nav>
+    </header>
+
+    <div class="quiz-container">
+
+        <div id="quiz-container">
+            <div class="question-container" id="question1">
+                <p>1. What does HTML stand for?</p>
+                <ul class="options">
+                    <li><input type="radio" name="q1" value="a"> HyperText Markup Language</li>
+                    <li><input type="radio" name="q1" value="b"> HyperText Modeling Language</li>
+                    <li><input type="radio" name="q1" value="c"> HyperText Management Language</li>
+                </ul>
+            </div>
+
+            <div class="question-container" id="question2">
+                <p>2. Which CSS property is used to control the text size?</p>
+                <ul class="options">
+                    <li><input type="radio" name="q2" value="a"> text-size</li>
+                    <li><input type="radio" name="q2" value="b"> font-size</li>
+                    <li><input type="radio" name="q2" value="c"> size</li>
+                </ul>
+            </div>
+
+            <div class="question-container" id="question3">
+                <p>3. What is JavaScript primarily used for?</p>
+                <ul class="options">
+                    <li><input type="radio" name="q3" value="a"> Styling web pages</li>
+                    <li><input type="radio" name="q3" value="b"> Building databases</li>
+                    <li><input type="radio" name="q3" value="c"> Adding interactivity to web pages</li>
+                </ul>
+            </div>
+
+            <br>
+            <div>
+                <button onclick="calculateScore()" class="btn btn-1">Submit</button>
+            </div>
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <script>
+        function calculateScore() {
+            var score = 0;
+
+            // Check answers for question 1
+            if (document.querySelector('input[name="q1"]:checked').value === 'a') {
+                score++;
+            }
+
+            // Check answers for question 2
+            if (document.querySelector('input[name="q2"]:checked').value === 'b') {
+                score++;
+            }
+
+            // Check answers for question 3
+            if (document.querySelector('input[name="q3"]:checked').value === 'c') {
+                score++;
+            }
+
+            // Display the score
+            document.getElementById('result').innerHTML = 'Your score is: ' + score + '/3';
+        }
+    </script>
+</body>
+
+
+</html>
+
+
